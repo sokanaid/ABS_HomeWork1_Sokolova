@@ -76,6 +76,23 @@ void Out(transport &s, ofstream &ofst) {
     }
 }
 
+// Вывод параметров текущего транспорта в поток для генерации теста
+void OutGenTest(transport &s, ofstream &ofst) {
+    switch(s.k) {
+        case transport::TRAIN:
+            OutGenTest(s.t, ofst);
+            break;
+        case transport::SHIP:
+            OutGenTest(s.s, ofst);
+            break;
+        case transport::PLANE:
+            OutGenTest(s.p, ofst);
+            break;
+        default:
+            ofst << "Incorrect transport!" << endl;
+    }
+}
+
 //------------------------------------------------------------------------------
 // Вычисление оптимального времени транспорта
 double IdealTime(transport &t) {

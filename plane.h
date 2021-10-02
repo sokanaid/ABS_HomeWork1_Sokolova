@@ -24,7 +24,7 @@ void InRnd(plane &p);
 
 // Вывод параметров прямоугольника в форматируемый поток
 void Out(plane &p, ofstream &ofst);
-
+void OutGenTest(plane &p, ofstream &ofst);
 // Вычисление периметра прямоугольника
 double IdealTime(plane &p);
 

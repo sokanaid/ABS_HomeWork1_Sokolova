@@ -1,9 +1,6 @@
-#include <iostream>
-#include <fstream>
 #include <cstdlib>
 #include <ctime>
 #include <cstring>
-
 #include "container.h"
 
 void errMessage1() {
@@ -33,10 +30,13 @@ int main(int argc, char *argv[]) {
     container c;
     Init(c);
 
-    ////cout << "argv[1] = " << argv[1] << "\n";
+
     if (!strcmp(argv[1], "-f")) {
         ifstream ifst(argv[2]);
+
         In(c, ifst);
+
+
     } else if (!strcmp(argv[1], "-n")) {
         auto size = atoi(argv[2]);
         if ((size < 1) || (size > 10000)) {
@@ -58,12 +58,13 @@ int main(int argc, char *argv[]) {
     ofstream ofst1(argv[3]);
     ofst1 << "Filled container:\n";
     Out(c, ofst1);
+    //OutGenTest(c, ofst1);
 
     // The 2nd part of task
     ofstream ofst2(argv[4]);
-    ofst2 << "Start Sorting..." + '\n' << ShellSort(c) << "\n";
+    ofst2 << ShellSort(c) << "\n";
     Out(c, ofst2);
     Clear(c);
-    cout << "Stop" << endl;
+    printf("Stop\n");
     return 0;
 }

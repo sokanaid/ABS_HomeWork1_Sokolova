@@ -34,6 +34,7 @@ transport *InRnd();
 
 // Вывод обобщенной фигуры
 void Out(transport &t, ofstream &ofst);
+void OutGenTest(transport &s, ofstream &ofst);
 
 // Вычисление оптимального времени обобщенного транспорта
 double IdealTime(transport &t);

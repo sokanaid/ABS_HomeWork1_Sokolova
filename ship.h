@@ -24,7 +24,8 @@ void InRnd(ship &s);
 
 // Вывод параметров прямоугольника в форматируемый поток
 void Out(ship &s, ofstream &ofst);
-
+// Генерация теста.
+void OutGenTest(ship &s, ofstream &ofst);
 // Вычисление периметра прямоугольника
 double IdealTime(ship &s);
 #endif //HOMEWORK1_SOKOLOVA_SHIP_H

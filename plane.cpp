@@ -10,10 +10,16 @@ double IdealTime(plane &p) {
 
 // Вывод параметров самолета в поток
 void Out(plane &p, ofstream &ofst) {
-    ofst << "It is a ship: flight range = "
+    ofst << "It is a plane: flight range = "
          << p.flightRange << ", lifting capacity = " << p.liftingCapacity << ", speed = " << p.speed
          << ", distance = " << p.distance
          << ". Ideal time = " << IdealTime(p) << "\n";
+}
+
+void OutGenTest(plane &p, ofstream &ofst) {
+    ofst << 3 << ' '
+         << p.flightRange << ' ' << p.liftingCapacity << ' ' << p.speed<<' '
+         << p.distance << '\n';
 }
 
 // Ввод параметров самолета из потока

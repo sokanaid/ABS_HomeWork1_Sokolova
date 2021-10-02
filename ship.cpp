@@ -16,6 +16,12 @@ void Out(ship &s, ofstream &ofst) {
          << ", distance = " << s.distance
          << ". Ideal time = " << IdealTime(s) << "\n";
 }
+// Генерация теста.
+void OutGenTest(ship &s, ofstream &ofst) {
+    ofst << 2<< ' '
+         << s.displacement<< ' ' << s.type <<' '<< s.speed<< ' '
+         << s.distance<<'\n';
+}
 
 // Ввод параметров корабля из потока
 void In(ship &s, ifstream &ifst) {
