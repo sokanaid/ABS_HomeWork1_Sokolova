@@ -21,6 +21,7 @@ void errMessage2() {
 
 //------------------------------------------------------------------------------
 int main(int argc, char *argv[]) {
+
     if (argc != 5) {
         errMessage1();
         return 1;
@@ -41,7 +42,7 @@ int main(int argc, char *argv[]) {
         auto size = atoi(argv[2]);
         if ((size < 1) || (size > 10000)) {
             printf("incorrect numer of figures = ");
-            printf("%g", size);
+            printf("%i", size);
             printf(". Set 0 < number <= 10000\n");
             return 3;
         }

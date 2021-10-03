@@ -11,10 +11,11 @@ enum shipType {
     LINER, TUGSHIP, TANKER
 };
 struct ship {
-    int displacement;
-    shipType type;
+
     int speed;
     double distance;
+    int displacement;
+    shipType type;
 };
 // Ввод параметров прямоугольника из файла
 void In(ship &s, ifstream &ifst);

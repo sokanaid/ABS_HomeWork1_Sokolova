@@ -10,10 +10,11 @@ using namespace std;
 #ifndef HOMEWORK1_SOKOLOVA_PLANE_H
 #define HOMEWORK1_SOKOLOVA_PLANE_H
 struct plane {
-    int flightRange,
-            liftingCapacity;
+
     int speed;
     double distance;
+    int flightRange,
+            liftingCapacity;
 };
 
 // Ввод параметров прямоугольника из файла

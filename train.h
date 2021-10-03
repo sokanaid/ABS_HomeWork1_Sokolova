@@ -8,9 +8,9 @@ using namespace std;
 #ifndef HOMEWORK1_SOKOLOVA_TRAIN_H
 #define HOMEWORK1_SOKOLOVA_TRAIN_H
 struct train {
-    int numberOfRailwayCarriage;
     int speed;
     double distance;
+    int numberOfRailwayCarriage;
 };
 // Ввод параметров прямоугольника из файла
 void In(train &t, ifstream &ifst);
